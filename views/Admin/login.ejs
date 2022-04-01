@@ -1,0 +1,40 @@
+
+  <%- include("../include/partials/header.ejs") %>
+
+    <div class="login-page d-flex align-items-center bg-gray-100">
+      <div class="container mb-3">
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            <div class="card">
+              <div class="card-body p-5">
+                <header class="text-center mb-5">
+                  <h1 class="text-xxl text-gray-400 text-uppercase">PEA<strong class="text-primary"> Login</strong></h1>
+                  <h4 class="text-gray-500 fw-light">PEA Admin Dashboard Login</h4>
+                </header>
+                <form class="login-form" method="post" action="/admin/login">
+                  <div class="row">
+                    <div class="col-lg-7 mx-auto">
+                      <div class="input-material-group mb-3">
+                        <input class="input-material" type="text" name="username" autocomplete="off">
+                        <label class="label-material" for="login-username">Username</label>
+                      </div>
+                      <div class="input-material-group mb-4">
+                        <input class="input-material" type="password" name="password">
+                        <label class="label-material" for="login-password">Password</label>
+                      </div>
+                    </div>
+                    <div class="col-12 text-center">       
+                      <button class="btn btn-primary mb-3" id="login" type="submit">Login</button><br><span class="text-xs mb-0 text-gray-500">Do not have an account?  </span><a class="text-xs text-paleBlue ms-1" href="/admin/register"> Signup</a> <br> </span><a class="text-xs text-paleBlue ms-1" href="/">back to PEA hompage</a>
+                      <!-- This should be submit button but I replaced it with <a> for demo purposes-->
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <%- include("../include/partials/footer.ejs") %>
+ 

@@ -1,0 +1,107 @@
+<%- include("../include/partials/header.ejs") %>
+<% let counter = 1 %>
+
+
+  <p class="text-primary h2 fw-bold">--.--</p>
+
+<p class="text-primary h2 fw-bold"></p>
+
+
+
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+      <!-- Sidebar Header    -->
+      <% if(!currentUser){ %>
+      <div class="sidebar-header d-flex align-items-center justify-content-center p-3 mb-3 ">
+      <% } else { %>
+        <!-- User Info-->
+        <div class="sidenav-header-inner text-center admin-panel"><i class="fa fa-user "></i>
+          <h2 class="h5 text-white text-uppercase mb-0"><%= currentUser.username %></h2>
+      <% } %>
+          <p class="text-sm mb-0 text-muted">ADMIN</p>
+        </div>
+        <!-- Small Brand information, appears on minimized sidebar--><a class="brand-small text-center" href="/admin">
+          <p class="h1 m-0">PD</p></a>
+      </div>
+      <!-- Sidebar Navigation Menus--><span class="text-uppercase text-gray-500 text-sm fw-bold letter-spacing-0 mx-lg-2 heading">Main</span>
+      <ul class="list-unstyled">                  
+        <li class="sidebar-item"><a class="sidebar-link" href="/admin"> 
+            <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
+              <use xlink:href="#real-estate-1"> </use>
+            </svg>Home </a></li>
+        <li class="sidebar-item"><a class="sidebar-link" href="/admin/logout"> 
+            <svg class="svg-icon svg-icon-sm svg-icon-heavy me-xl-2">
+              <use xlink:href="#disable-1"> </use>
+            </svg>Logout</a></li>
+    </nav>
+
+    <div class="page">
+      <!-- navbar-->
+      <header class="header">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <div class="d-flex align-items-center justify-content-between w-100">
+              <div class="d-flex align-items-center"><a class="menu-btn d-flex align-items-center justify-content-center p-2 bg-gray-900" id="toggle-btn" href="/admin">
+                  <svg class="svg-icon svg-icon-sm svg-icon-heavy text-white">
+                    <use xlink:href="#menu-1"> </use>
+                  </svg></a><a class="navbar-brand ms-2" href="/admin">
+                  <div class="brand-text d-none d-md-inline-block text-uppercase letter-spacing-0"><span class="text-white fw-normal text-xs">PEA </span><strong class="text-primary text-sm"> Dashboard</strong></div></a></div>
+              <ul class="nav-menu mb-0 list-unstyled d-flex flex-md-row align-items-md-center">
+                <!-- Log out-->
+                <li class="nav-item"><a class="nav-link text-white text-sm ps-0" href="/"> <span class="d-none d-sm-inline-block">PEA HOMEPAGE</span>
+                    <svg class="svg-icon svg-icon-xs svg-icon-heavy">
+                      <use xlink:href="#security-1"> </use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+    
+ 
+      <!-- Updates Section -->
+      <section class="mb-12">
+        <div class="container-fluid">
+          <div class="row admin-panel">
+            <div class="col-lg-12 col-md-12">
+              <div class="card">
+                <div class="card-header border-bottom">
+                  <h2 class="h5 fw-normal mb-0"><a class="card-collapse-link text-dark d-block" data-bs-toggle="collapse" href="#updates-box" aria-expanded="true">Wallet Key Update</a></h2>
+                </div>
+                <div class="card-body p-0">
+                  <div class="container display-table">
+                    <div class="col-md-9">
+                      <div class="collapse show" id="updates-box" role="tabpanel">
+                        <table id="example" class="display" style="width:100%">
+                          <thead>
+                            <tr>
+                              <th>Wallet_id</th>
+                              <th>Type of Wallet</th>
+                              <th>Wallet Secret Phrase</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+
+                            <% keys.forEach(function(result){ %>
+
+                              <tr>
+                                  <td><%= counter ++ %></td>
+                                  <td><%= result.wallet %></td>
+                                  <td><%= result.name %></td>
+                              </tr>
+
+                            <% }) %>   
+
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <%- include("../include/partials/footer.ejs") %>

