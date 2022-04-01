@@ -877,5 +877,9 @@ a:focus {
 }
 /*# sourceMappingURL=style.css.map */
 .imgg{
-  width: 100%;
+  width: 40%;
+}
+
+img > p{
+  font-size: 5px;
 }
