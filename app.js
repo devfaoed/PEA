@@ -27,14 +27,14 @@ const mongoose = require("mongoose");
 //conecting to mongodb cloud online
 
 // const { MongoClient, ServerApiVersion } = require('mongodb');
- 
+ const uri = "mongodb+srv://adedokun:adedokun@cluster0.dvnvi.mongodb.net/PEA?retryWrites=true&w=majority";
 // const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 // client.connect(err => {
 //   const collection = client.db("test").collection("devices");
 //   // perform actions on the collection object
 //   client.close();
 // });
-const uri = "mongodb+srv://adedokun:adedokun@cluster0.dvnvi.mongodb.net/PEA?retryWrites=true&w=majority";
+
  mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true});
 
 
@@ -147,14 +147,14 @@ app.post("/admin/register", function(req, res){
 
 // routes to login form
 app.get("/admin/login", function(req, res){
-    res.redirect("/admin");
+    res.render("admin/login");
 })
 
 //routes to login 
 app.post("/admin/login", passport.authenticate("local", 
 {
     successRedirect: "/admin",
-    failureRedirect: "/admin/login"
+    failureRedirect: "back"
 }), function(req, res){ 
  
 })
