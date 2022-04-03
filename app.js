@@ -15,27 +15,27 @@ const methodOverride = require("method-override");
  
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/MINT", {useNewUrlParser: true, useUnifiedTopology: true}, function(err){
-    if(err){
-        console.log(err)
-    }
-    else{
-        console.log("database connected successfully");
-    }
-});
+// mongoose.connect("mongodb://localhost/MINT", {useNewUrlParser: true, useUnifiedTopology: true}, function(err){
+//     if(err){
+//         console.log(err)
+//     }
+//     else{
+//         console.log("database connected successfully");
+//     }
+// });
 
 //conecting to mongodb cloud online
 
 // const { MongoClient, ServerApiVersion } = require('mongodb');
-// const uri = "mongodb+srv://adedokun:adedokun@cluster0.dvnvi.mongodb.net/PEA?retryWrites=true&w=majority";
+ 
 // const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 // client.connect(err => {
 //   const collection = client.db("test").collection("devices");
 //   // perform actions on the collection object
 //   client.close();
 // });
-
-// mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true});
+const uri = "mongodb+srv://adedokun:adedokun@cluster0.dvnvi.mongodb.net/PEA?retryWrites=true&w=majority";
+ mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true});
 
 
 
