@@ -147,7 +147,7 @@ app.post("/admin/register", function(req, res){
 
 // routes to login form
 app.get("/admin/login", function(req, res){
-    res.render("/admin/login");
+    res.redirect("/admin");
 })
 
 //routes to login 
