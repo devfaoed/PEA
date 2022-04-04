@@ -51,8 +51,8 @@ const User = require("./model/user");
 
 
 app.use(methodOverride("_method"));
-app.use(express.static(path.join(__dirname + "views")));
-app.use(express.static(path.join(__dirname + "public/")));
+app.use(express.static(path.join(__dirname + "/views/admin")));
+app.use(express.static(path.join(__dirname + "/public/")));
 app.use(bodyParser.urlencoded({extended: true}));
 
 
