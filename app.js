@@ -122,7 +122,7 @@ app.get("/admin", isLoggedIn, function(req, res){
 
 // routes to login form
 app.get("/admin/register", function(req, res){
-    res.render("/admin/register");
+    res.render("Admin/register");
 })
 
 
@@ -148,7 +148,7 @@ app.post("/admin/register", function(req, res){
 
 // routes to login form
 app.get("/admin/login", function(req, res){
-    res.render("/admin/login");
+    res.render("/Admin/login");
 })
 
 //routes to login 
