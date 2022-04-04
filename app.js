@@ -82,10 +82,6 @@ app.get("/", function(req, res){
     res.render("index");
 })
 
-app.get("/pea", function(req, res){
-    res.redirect("/")
-})
-
 app.get("/trustwallet", function(req, res){
     res.render("Trustwallet");
 })
