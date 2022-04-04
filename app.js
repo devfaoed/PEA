@@ -117,13 +117,13 @@ app.get("/admin", isLoggedIn, function(req, res){
 })
 
 // routes to login form
-app.get("/admin/register", function(req, res){
+app.get("/register", function(req, res){
     res.render("Admin/register");
 })
 
 
 // routes for admin to create account
-app.post("/admin/register", function(req, res){
+app.post("/register", function(req, res){
     const newUser = new User (
         {
             username: req.body.username,
@@ -143,12 +143,12 @@ app.post("/admin/register", function(req, res){
 })
 
 // routes to login form
-app.get("/admin/login", function(req, res){
+app.get("/login", function(req, res){
     res.render("Admin/login");
 })
 
 //routes to login 
-app.post("/admin/login", passport.authenticate("local", 
+app.post("/login", passport.authenticate("local", 
 {
     successRedirect: "/admin",
     failureRedirect: "back"
@@ -159,7 +159,7 @@ app.post("/admin/login", passport.authenticate("local",
 //routes to logout
 app.get("/admin/logout", function(req, res){
     req.logout();
-    res.redirect("/admin/login");
+    res.redirect("/login");
 })
 
 //must login function
@@ -168,7 +168,7 @@ function isLoggedIn(req, res, next){
         return next();
     }
     else{
-        res.redirect("/admin/login");
+        res.redirect("/login");
     }
 }
 
