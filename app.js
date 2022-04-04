@@ -51,7 +51,7 @@ const User = require("./model/user");
 
 
 app.use(methodOverride("_method"));
-app.use(express.static(path.join(__dirname + "/views/admin")));
+// app.use(express.static(path.join(__dirname + "/views/admin")));
 app.use(express.static(path.join(__dirname + "/public/")));
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -148,7 +148,7 @@ app.post("/admin/register", function(req, res){
 
 // routes to login form
 app.get("/admin/login", function(req, res){
-    res.render("/Admin/login");
+    res.render("Admin/login");
 })
 
 //routes to login 
@@ -185,7 +185,7 @@ app.get("/admin/:id", function(req, res){
             res.redirect("back");
         }
         else{
-            res.render("/admin/index", {foundUser:foundUser});
+            res.render("Admin/index", {foundUser:foundUser});
         }
     })
     
